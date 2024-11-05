@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.monitoring.MonitoringFragment">
+
+    <!-- Top Bar with Title and Notification Icon -->
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/text_monitoring"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Monitoring Lahan"
+            android:textSize="20sp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar"
+        android:layout_above="@id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Top Icons -->
+            <LinearLayout
+                android:id="@+id/top_icons_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/iconLahanSaya"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Lahan Saya"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_lahan_saya" />
+
+                <ImageButton
+                    android:id="@+id/iconPemantauanCuaca"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="18dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Pemantauan Cuaca"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_pemantauan_cuaca" />
+
+                <ImageButton
+                    android:id="@+id/iconPemantauanUdara"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="18dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Pemantauan Udara"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_pemantauan_udara" />
+
+                <ImageButton
+                    android:id="@+id/iconPenyiramanOtomatis"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="18dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Penyiraman Otomatis"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_penyiraman" />
+
+                <ImageButton
+                    android:id="@+id/iconKalenderPetani"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="18dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Kalender Petani"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_kalender" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_rectangle"
+        app:itemIconTint="@color/dark_green"
+        app:itemTextColor="@color/dark_green"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

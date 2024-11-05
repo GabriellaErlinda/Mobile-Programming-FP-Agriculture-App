@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/baseline_camera_enhance_24"
-        android:title="AV Cam" />
-
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Dashboard" />
+        android:icon="@drawable/ic_dashboard_filled"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_av_cam"
+        android:icon="@drawable/ic_av_cam_filled"
+        android:title="@string/title_av_cam" />
 
     <item
         android:id="@+id/navigation_monitoring"
-        android:icon="@drawable/ic_baseline_monitor_heart_24"
-        android:title="Monitoring" />
-
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Notification" />
-
+        android:icon="@drawable/ic_monitor_filled"
+        android:title="@string/title_monitoring" />
 </menu>

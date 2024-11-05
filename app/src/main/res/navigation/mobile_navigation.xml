@@ -6,20 +6,20 @@
     app:startDestination="@+id/navigation_home">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.agrivisionfp.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.agrivisionfp.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.agrivisionfp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_av_cam"
+        android:name="com.example.agrivisionfp.ui.av_cam.AVCamFragment"
+        android:label="@string/title_av_cam"
+        tools:layout="@layout/fragment_av_cam" />
+
+    <fragment
+        android:id="@+id/navigation_monitoring"
+        android:name="com.example.agrivisionfp.ui.monitoring.MonitoringFragment"
+        android:label="@string/title_monitoring"
+        tools:layout="@layout/fragment_monitoring" />
 </navigation>

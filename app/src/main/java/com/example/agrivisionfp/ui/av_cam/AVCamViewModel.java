@@ -1,16 +1,16 @@
-package com.example.agrivisionfp.ui.notifications;
+package com.example.agrivisionfp.ui.av_cam;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class AVCamViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public AVCamViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is AV Cam fragment");
     }
 
     public LiveData<String> getText() {

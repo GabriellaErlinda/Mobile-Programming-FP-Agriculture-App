@@ -1,4 +1,4 @@
-package com.example.agrivisionfp.ui.notifications;
+package com.example.agrivisionfp.ui.monitoring;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.agrivisionfp.databinding.FragmentNotificationsBinding;
+import com.example.agrivisionfp.databinding.FragmentMonitoringBinding;
+import com.example.agrivisionfp.databinding.FragmentMonitoringBinding;
 
-public class NotificationsFragment extends Fragment {
+public class MonitoringFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentMonitoringBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        MonitoringViewModel notificationsViewModel =
+                new ViewModelProvider(this).get(MonitoringViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentMonitoringBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
+        final TextView textView = binding.textMonitoring;
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
